@@ -19,7 +19,7 @@ $(document).ready(function() {
 	$('#login-tab').click(cambiaTabs);
 	$('#signup-tab').click(cambiaTabs);
 
-	$('input').keyup(function() {
+	$('input').keydown(function() {
 		if ($(this).val().length > 0) {
 			$(this).prev('label').addClass('active');
 		} else {

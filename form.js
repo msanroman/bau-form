@@ -19,4 +19,20 @@ $(document).ready(function() {
 	$('#login-tab').click(cambiaTabs);
 	$('#signup-tab').click(cambiaTabs);
 
+	$('input').keyup(function() {
+		if ($(this).val().length > 0) {
+			$(this).prev('label').addClass('active');
+		} else {
+			$(this).prev('label').removeClass('active');
+		}
+	});
+
+	$('input').focus(function() {
+		$(this).prev('label').addClass('highlight');
+	});
+
+	$('input').blur(function() {
+		$(this).prev('label').removeClass('highlight');
+	});
+
 });

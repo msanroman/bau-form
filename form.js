@@ -25,6 +25,10 @@ $(document).ready(function() {
 		} else {
 			$(this).prev('label').removeClass('active');
 		}
+
+		if(this.validity.valid) {
+			$(this).next('.error').removeClass('visible');
+		}
 	});
 
 	$('input').focus(function() {
@@ -33,6 +37,12 @@ $(document).ready(function() {
 
 	$('input').blur(function() {
 		$(this).prev('label').removeClass('highlight');
+		if (this.validity.valid) {
+			$(this).next('.error').removeClass('visible');
+		} else {
+			$(this).next('.error').addClass('visible');
+		}
+	});
 	});
 
 });

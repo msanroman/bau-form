@@ -171,3 +171,13 @@ textarea {
   text-align: right;
 }
 
+.error {
+	color: red;
+	margin-top: 2rem;
+	display: inline-block;
+	opacity: 0;
+}
+.error.visible {
+	opacity: 1;
+}
+

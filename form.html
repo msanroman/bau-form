@@ -23,6 +23,7 @@
 							First Name<span class="req">*</span>
 						</label>
 						<input type="text" required autocomplete="off" />
+						<span class="error">This field is required</span>
 					</div>
 
 					<div class="field-wrap">
@@ -30,6 +31,7 @@
 							Last Name<span class="req">*</span>
 						</label>
 						<input type="text"required autocomplete="off"/>
+						<span class="error">This field is required</span>
 					</div>
 				</div>
 
@@ -38,13 +40,18 @@
 						Email Address<span class="req">*</span>
 					</label>
 					<input type="email" required autocomplete="off"/>
+					<span class="error">Is not a valid email</span>
 				</div>
 
 				<div class="field-wrap">
 					<label>
 						Set A Password<span class="req">*</span>
 					</label>
-					<input type="password" required autocomplete="off"/>
+					<input type="password" class="password" required minLength="6" maxLength="15" autocomplete="off"/>
+					<a href="#" class="toggle-password">👀</a>
+					<span class="error">
+						Password should be between 6 and 15 characters
+					</span>
 				</div>
 
 				<button type="submit" class="button button-block"/>Get Started</button>

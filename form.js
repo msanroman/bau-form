@@ -43,6 +43,13 @@ $(document).ready(function() {
 			$(this).next('.error').addClass('visible');
 		}
 	});
+
+	$('.toggle-password').click(function() {
+		if ($('input.password').attr('type') === 'password') {
+			$('input.password').attr('type', 'text');
+		} else {
+			$('input.password').attr('type', 'password');
+		}
 	});
 
 });

@@ -4,4 +4,18 @@
  * 3. Validación
  */
 $(document).ready(function() {
+	$('#login-tab').click(function() {
+		$('#signup').hide();
+		$('#login').show();
+		$('.tab.active').removeClass('active');
+		$(this).parent().addClass('active');
+	});
+
+	$('#signup-tab').click(function() {
+		$('#login').hide();
+		$('#signup').show();
+		$('.tab.active').removeClass('active');
+		$(this).parent().addClass('active');
+	});
+
 });
